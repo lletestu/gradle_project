@@ -44,6 +44,22 @@ sonarRunner {
     }
 }
 
+sourceSets {
+    main {
+        java {
+            srcDir 'src/com'
+        }
+        resources {
+            srcDir 'src/res'
+        }
+    }
+    test {
+        java {
+            srcDir 'src/test'
+        }
+    }
+}
+
 repositories {
     mavenCentral()
 }

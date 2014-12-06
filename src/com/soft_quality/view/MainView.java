@@ -1,10 +1,10 @@
-package com.soft_quality.view;
+package soft_quality.view;
 
-import com.soft_quality.controller.PlaneController;
-import com.soft_quality.model.Doors;
-import com.soft_quality.model.Handle;
-import com.soft_quality.model.Leds;
-import com.soft_quality.model.Wheel;
+import soft_quality.controller.PlaneController;
+import soft_quality.model.Doors;
+import soft_quality.model.Handle;
+import soft_quality.model.Leds;
+import soft_quality.model.Wheel;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -140,7 +140,7 @@ public class MainView extends JFrame {
         cons.gridy = 1;
         cockpitPanel.add(new JLabel("Leds state"), cons);
 
-        imgLeds = new JLabel(loadImgRessource("res/led_green2.png"));
+        imgLeds = new JLabel(loadImgRessource("led_green2.png"));
         cons.gridx = 2;
         cons.gridy = 2;
         cockpitPanel.add(imgLeds, cons);
@@ -167,7 +167,7 @@ public class MainView extends JFrame {
         // Initalize array
         imgWheelState = new JLabel[NUMBER_WHEELS];
         for (int i = 0; i < imgWheelState.length; ++i) {
-            imgWheelState[i] = new JLabel(loadImgRessource("res/wheel_down.png"));
+            imgWheelState[i] = new JLabel(loadImgRessource("wheel_down.png"));
         }
 
         // Initialize label
@@ -211,19 +211,19 @@ public class MainView extends JFrame {
 	public void setLed(Leds color){
 		switch(color){
 		case GREEN:
-            imgLeds.setIcon(loadImgRessource("res/led_green2.png"));
+            imgLeds.setIcon(loadImgRessource("led_green2.png"));
 			break;
 		case NONE:
-            imgLeds.setIcon(loadImgRessource("res/led_empty2.png"));
+            imgLeds.setIcon(loadImgRessource("led_empty2.png"));
 			break;
 		case ORANGE:
-            imgLeds.setIcon(loadImgRessource("res/led_orange2.png"));
+            imgLeds.setIcon(loadImgRessource("led_orange2.png"));
 			break;
 		case RED:
-            imgLeds.setIcon(loadImgRessource("res/led_red2.png"));
+            imgLeds.setIcon(loadImgRessource("led_red2.png"));
 			break;
 		default:
-            imgLeds.setIcon(loadImgRessource("res/led_empty2.png"));
+            imgLeds.setIcon(loadImgRessource("led_empty2.png"));
 			break;
 		}
 	}
@@ -245,13 +245,13 @@ public class MainView extends JFrame {
                 System.out.println(index + "-" + stateList.get(key));
                 switch (stateList.get(key)) {
                     case OUT:
-                        path = "res/wheel_down.png";
+                        path = "wheel_down.png";
                         break;
                     case TRANSITION:
-                        path = "res/wheel_transition.png";
+                        path = "wheel_transition.png";
                         break;
                     case IN:
-                        path = "res/wheel_up.png";
+                        path = "wheel_up.png";
                         break;
                     default://???
                         //TODO what is default case?
@@ -284,16 +284,16 @@ public class MainView extends JFrame {
                 //System.out.println(index + "-" + stateList.get(key));
                 switch (stateList.get(key)) {
                     case OUT:
-                    	g.drawImage(loadImage("res/wheel_down.png")
+                    	g.drawImage(loadImage("wheel_down.png")
                     			,null,0,0);
                         break;
                     case TRANSITION:
-                    	g.drawImage(loadImage("res/wheel_transition.png")
+                    	g.drawImage(loadImage("wheel_transition.png")
                     			,
                     			null,0,0);
                         break;
                     case IN:
-                    	g.drawImage(loadImage("res/wheel_up.png")
+                    	g.drawImage(loadImage("wheel_up.png")
                     			,
                     			null,0,0);
                         break;
@@ -304,11 +304,11 @@ public class MainView extends JFrame {
                 
                 switch(doorsList.get(key)){
 				case CLOSE:
-					g.drawImage(loadImage("res/door_close.png"),
+					g.drawImage(loadImage("door_close.png"),
                 			null,0,0);
 					break;
 				case OPEN:
-					g.drawImage(loadImage("res/door_open.png"),
+					g.drawImage(loadImage("door_open.png"),
                 			null,0,0);
 					break;
 				default:

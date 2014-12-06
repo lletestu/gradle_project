@@ -1,4 +1,4 @@
-package com.soft_quality.model;
+package soft_quality.model;
 
 /**
  * define the position of gears on the plane

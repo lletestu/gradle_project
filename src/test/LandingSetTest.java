@@ -1,9 +1,10 @@
-package com.soft_quality.model;
-
 import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import soft_quality.model.Doors;
+import soft_quality.model.LandingSet;
+import soft_quality.model.Wheel;
 
 public class LandingSetTest extends TestCase {
 

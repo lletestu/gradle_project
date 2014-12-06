@@ -1,16 +1,16 @@
-package com.soft_quality.controller;
+package soft_quality.controller;
 
 import javax.swing.Timer;
 import java.awt.event.*;
 import javax.swing.SwingWorker;
-import com.soft_quality.model.Doors;
-import com.soft_quality.model.Handle;
-import com.soft_quality.model.Leds;
-import com.soft_quality.model.Plane;
-import com.soft_quality.model.Position;
-import com.soft_quality.model.Timing;
-import com.soft_quality.model.Wheel;
-import com.soft_quality.view.MainView;
+import soft_quality.model.Doors;
+import soft_quality.model.Handle;
+import soft_quality.model.Leds;
+import soft_quality.model.Plane;
+import soft_quality.model.Position;
+import soft_quality.model.Timing;
+import soft_quality.model.Wheel;
+import soft_quality.view.MainView;
 
 /**
  * controller class for plane

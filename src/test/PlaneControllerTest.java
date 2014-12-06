@@ -1,6 +1,5 @@
-package com.soft_quality.controller;
-
-import com.soft_quality.view.MainView;
+import soft_quality.controller.PlaneController;
+import soft_quality.view.MainView;
 import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
