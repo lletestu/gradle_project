@@ -17,8 +17,8 @@ public class PlaneControllerTest extends TestCase {
     @Override
     public void setUp() throws Exception {
         super.setUp();
-        //myPlaneController = new PlaneController();
-        //myView = new MainView(myPlaneController);
+        myPlaneController = new PlaneController();
+        myView = new MainView(myPlaneController);
     }
 
     @After
@@ -33,9 +33,9 @@ public class PlaneControllerTest extends TestCase {
      */
     @Test
     public void testSetMyView() throws Exception {
-        //assertFalse(myPlaneController.isSettingView());
-        //myPlaneController.setMyView(myView);
-        //assertTrue(myPlaneController.isSettingView());
+        assertFalse(myPlaneController.isSettingView());
+        myPlaneController.setMyView(myView);
+        assertTrue(myPlaneController.isSettingView());
     }
 
     /**

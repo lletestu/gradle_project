@@ -40,7 +40,7 @@ public class MainView extends JFrame {
 	private JLabel imgLeds;
 	private JLabel[] imgWheelState;
 	private JSlider handle;
-    private JButton emergencyButton;
+    //private JButton emergencyButton;
 
     private final static int NUMBER_WHEELS = 3;
 
@@ -118,7 +118,7 @@ public class MainView extends JFrame {
         cockpitPanel.add(handle, cons);
 
         // Set emergency
-        cons.gridx = 1;
+        /*cons.gridx = 1;
         cons.gridy = 1;
         cockpitPanel.add(new JLabel("Emergency"), cons);
 
@@ -133,7 +133,7 @@ public class MainView extends JFrame {
         });
         cons.gridx = 1;
         cons.gridy = 2;
-        cockpitPanel.add(emergencyButton, cons);
+        cockpitPanel.add(emergencyButton, cons);*/
 
         // Set leds
         cons.gridx = 2;

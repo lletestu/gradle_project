@@ -10,6 +10,12 @@ import soft_quality.view.MainView;
  *
  */
 public class MainController {
+    /**
+     * private constructor to block instanciation of utility class
+     */
+    private MainController(){
+    }
+
     public static void main (String[] args) {
         PlaneController planeController = new PlaneController();
         final MainView win = new MainView(planeController);
