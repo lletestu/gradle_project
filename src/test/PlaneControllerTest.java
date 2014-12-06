@@ -17,8 +17,8 @@ public class PlaneControllerTest extends TestCase {
     @Override
     public void setUp() throws Exception {
         super.setUp();
-        myPlaneController = new PlaneController();
-        myView = new MainView(myPlaneController);
+        /*myPlaneController = new PlaneController();
+        myView = new MainView(myPlaneController);*/
     }
 
     @After
