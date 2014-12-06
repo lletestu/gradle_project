@@ -4,6 +4,9 @@ import org.junit.Before;
 import org.junit.Test;
 import soft_quality.model.Timing;
 
+/**
+ * {@link soft_quality.model.Timing}
+ */
 public class TimingTest extends TestCase {
 
     @Before

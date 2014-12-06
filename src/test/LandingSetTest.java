@@ -6,6 +6,9 @@ import soft_quality.model.Doors;
 import soft_quality.model.LandingSet;
 import soft_quality.model.Wheel;
 
+/**
+ * {@link soft_quality.model.LandingSet}
+ */
 public class LandingSetTest extends TestCase {
 
     LandingSet ls1;

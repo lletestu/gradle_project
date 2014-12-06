@@ -5,6 +5,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * {@link soft_quality.controller.PlaneController}
+ */
 public class PlaneControllerTest extends TestCase {
 
     PlaneController myPlaneController;
