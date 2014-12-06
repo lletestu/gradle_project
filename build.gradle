@@ -38,8 +38,8 @@ sonarRunner {
 
     sonarProperties {
         property "sonar.host.url", "http://87.98.155.63:9000/"
-        property "sonar.projectKey", "softwarequality"
-        property "sonar.name", "Software Quality"
+        property "sonar.projectKey", "TP1_SQ"
+        property "sonar.name", "TP1_SQ"
         property "sonar.sourceEncoding", "UTF-8"
     }
 }
