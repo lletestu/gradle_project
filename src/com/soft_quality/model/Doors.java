@@ -1,4 +1,4 @@
-package soft_quality.model;
+package com.soft_quality.model;
 
 /**
  * Describe the possible state of a door

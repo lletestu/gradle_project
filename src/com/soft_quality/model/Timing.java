@@ -1,4 +1,4 @@
-package soft_quality.model;
+package com.soft_quality.model;
 
 /**
  * Timing constants for each step of wheel movement
@@ -7,16 +7,15 @@ package soft_quality.model;
  */
 public class Timing {
 
-	public static int timeBeforeTigger = 300;
-	public static long timeToOpenGate = 1000;
-	public static long timeToCloseGate = 1000;
-	public static long timeFromStabilizedToTransition = 1000;
-	public static long timeFromTransitionToStabilized = 1000;
-
-    /**
-     * constructor to avoid instantiation of utility class
-     */
-    private Timing(){
-    }
+	public static final int timeBeforeTigger = 300;
+	public static final long timeToOpenGate = 1000;
+	public static final long timeToCloseGate = 1000;
+	public static final long timeFromStabilizedToTransition = 1000;
+	public static final long timeFromTransitionToStabilized = 1000;
 	
+	/**
+	 * constructor to avoid instantiation of utility class
+	 */
+	private Timing(){
+	}
 }

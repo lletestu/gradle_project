@@ -1,8 +1,8 @@
-package soft_quality.controller;
+package com.soft_quality.controller;
 
 import javax.swing.SwingUtilities;
 
-import soft_quality.view.MainView;
+import com.soft_quality.view.MainView;
 
 /**
  * entry point of the application
@@ -10,12 +10,12 @@ import soft_quality.view.MainView;
  *
  */
 public class MainController {
-    /**
-     * private constructor to block instanciation of utility class
-     */
-    private MainController(){
-    }
-
+	/**
+	 * private constructor to block instanciation of utility class
+	 */
+	private MainController(){
+	}
+	
     public static void main (String[] args) {
         PlaneController planeController = new PlaneController();
         final MainView win = new MainView(planeController);
