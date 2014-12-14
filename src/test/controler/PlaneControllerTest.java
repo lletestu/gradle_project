@@ -123,7 +123,8 @@ public class PlaneControllerTest extends TestCase {
         myPlaneController.inWheels();
         //interrupt with out wheel
         myPlaneController.outWheels();
-        assertEquals(Leds.ORANGE,myPlaneController.getMyLedState());
+        //assertEquals(Leds.ORANGE,myPlaneController.getMyLedState());
+        assertEquals(Leds.RED,myPlaneController.getMyLedState());
         assertEquals(Handle.DOWN,myPlaneController.getMyHandleState());
 
         //let's wait the appropriate time

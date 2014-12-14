@@ -21,7 +21,7 @@ test {
     include '**'
 
     // explicitly exclude tests view for jenkins test
-    exclude 'controler/**/*'
+    //exclude 'controler/**/*'
 
     // show standard out and standard error of the test JVM(s) on the console
     testLogging.showStandardStreams = true
