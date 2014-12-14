@@ -1,4 +1,4 @@
-package com.soft_quality.model;
+package soft_quality.model;
 
 /**
  * Timing constants for each step of wheel movement

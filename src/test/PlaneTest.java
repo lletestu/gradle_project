@@ -1,4 +1,5 @@
 import junit.framework.TestCase;
+import org.junit.Before;
 import org.junit.Test;
 import soft_quality.model.*;
 
@@ -10,10 +11,12 @@ import java.util.HashMap;
 public class PlaneTest extends TestCase {
     Plane p;
 
-	/*@Before
-	@Override
-	public void setUp() throws Exception {
-	}*/
+    @Before
+    @Override
+    public void setUp() throws Exception {
+        super.setUp();
+        p = new Plane();
+    }
 
     @Test
     public void testInitialState() {

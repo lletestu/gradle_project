@@ -1,8 +1,8 @@
-package com.soft_quality.controller;
+package soft_quality.controller;
 
 import javax.swing.SwingUtilities;
 
-import com.soft_quality.view.MainView;
+import soft_quality.view.MainView;
 
 /**
  * entry point of the application
