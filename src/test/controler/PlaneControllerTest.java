@@ -1,3 +1,5 @@
+package controler;
+
 import soft_quality.controller.PlaneController;
 import soft_quality.view.MainView;
 import soft_quality.model.*;
