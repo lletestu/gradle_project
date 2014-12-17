@@ -25,6 +25,9 @@ public final class MainController {
         final MainView win = new MainView(planeController);
         planeController.setMyView(win);
         SwingUtilities.invokeLater(new Runnable() {
+            /**
+             * main run
+             */
             public void run() {
             	win.setVisible(true);
             }

@@ -56,7 +56,7 @@ public class LandingSet {
      * @return true if consistent, false otherwise
      */
     public boolean checkValidity(Wheel supposedWheelState,Doors supposedDoorsState){
-        return ( (supposedWheelState == wheelState)
-                && (supposedDoorsState == doorState) );
+        return ( (supposedWheelState.equals(wheelState))
+                && (supposedDoorsState.equals(doorState)) );
     }
 }

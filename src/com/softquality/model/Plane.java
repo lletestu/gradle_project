@@ -12,7 +12,7 @@ public class Plane {
     private Handle handleState;
     private Leds ledsState;
     private LandingSet[] landingSets;
-    private static final int numberOfLandingSets = 3;
+    private static final int NB_LANDINGSETS = 3;
 
     /**
      * default constructor, initialize to OUT state by default
@@ -20,8 +20,8 @@ public class Plane {
     public Plane(){
         handleState = Handle.DOWN;
         ledsState = Leds.GREEN;
-        landingSets = new LandingSet[numberOfLandingSets];
-        for(int i=0;i<numberOfLandingSets;i++){
+        landingSets = new LandingSet[NB_LANDINGSETS];
+        for(int i=0;i< NB_LANDINGSETS;i++){
             landingSets[i] = new LandingSet();
         }
     }

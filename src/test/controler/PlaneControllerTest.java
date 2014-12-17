@@ -53,10 +53,10 @@ public class PlaneControllerTest extends TestCase {
 
         //let's wait the appropriate time
         try {
-            Thread.sleep(Timing.timeToOpenGate);
-            Thread.sleep(Timing.timeFromStabilizedToTransition);
-            Thread.sleep(Timing.timeFromTransitionToStabilized);
-            Thread.sleep(Timing.timeToCloseGate);
+            Thread.sleep(Timing.TIME_TO_OPEN_GATE);
+            Thread.sleep(Timing.TIME_FROM_STABILIZED_TO_TRANSITION);
+            Thread.sleep(Timing.TIME_FROM_TRANSITION_TO_STABILIZED);
+            Thread.sleep(Timing.TIME_TO_CLOSE_GATE);
             Thread.sleep(500);//tolerance time for propagation
         } catch (InterruptedException e) {
             assertTrue(false); //timing fail, test is irrelevant
@@ -82,10 +82,10 @@ public class PlaneControllerTest extends TestCase {
 
         //let's wait the appropriate time
         try {
-            Thread.sleep(Timing.timeToOpenGate);
-            Thread.sleep(Timing.timeFromStabilizedToTransition);
-            Thread.sleep(Timing.timeFromTransitionToStabilized);
-            Thread.sleep(Timing.timeToCloseGate);
+            Thread.sleep(Timing.TIME_TO_OPEN_GATE);
+            Thread.sleep(Timing.TIME_FROM_STABILIZED_TO_TRANSITION);
+            Thread.sleep(Timing.TIME_FROM_TRANSITION_TO_STABILIZED);
+            Thread.sleep(Timing.TIME_TO_CLOSE_GATE);
             Thread.sleep(500);//tolerance time for propagation
         } catch (InterruptedException e) {
             assertTrue(false); //timing fail, test is irrelevant
@@ -129,10 +129,10 @@ public class PlaneControllerTest extends TestCase {
 
         //let's wait the appropriate time
         try {
-            Thread.sleep(Timing.timeToOpenGate);
-            Thread.sleep(Timing.timeFromStabilizedToTransition);
-            Thread.sleep(Timing.timeFromTransitionToStabilized);
-            Thread.sleep(Timing.timeToCloseGate);
+            Thread.sleep(Timing.TIME_TO_OPEN_GATE);
+            Thread.sleep(Timing.TIME_FROM_STABILIZED_TO_TRANSITION);
+            Thread.sleep(Timing.TIME_FROM_TRANSITION_TO_STABILIZED);
+            Thread.sleep(Timing.TIME_TO_CLOSE_GATE);
             Thread.sleep(500);//tolerance time for propagation
         } catch (InterruptedException e) {
             assertTrue(false); //timing fail, test is irrelevant
@@ -155,10 +155,10 @@ public class PlaneControllerTest extends TestCase {
 
         //let's wait the appropriate time
         try {
-            Thread.sleep(Timing.timeToOpenGate);
-            Thread.sleep(Timing.timeFromStabilizedToTransition);
-            Thread.sleep(Timing.timeFromTransitionToStabilized);
-            Thread.sleep(Timing.timeToCloseGate);
+            Thread.sleep(Timing.TIME_TO_OPEN_GATE);
+            Thread.sleep(Timing.TIME_FROM_STABILIZED_TO_TRANSITION);
+            Thread.sleep(Timing.TIME_FROM_TRANSITION_TO_STABILIZED);
+            Thread.sleep(Timing.TIME_TO_CLOSE_GATE);
             Thread.sleep(500);//tolerance time for propagation
         } catch (InterruptedException e) {
             assertTrue(false); //timing fail, test is irrelevant

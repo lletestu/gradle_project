@@ -56,7 +56,11 @@ public class PlaneController {
         if (trigger != null && trigger.isRunning()) {
             trigger.stop();
         } else {
-            trigger = new Timer(Timing.timeBeforeTigger, new ActionListener() {
+            trigger = new Timer(Timing.TIME_BEFORE_TIGGER, new ActionListener() {
+                /**
+                 * Action performs
+                 * @param evt event for timer
+                 */
                 public void actionPerformed(ActionEvent evt) {
                     if (out) {
                         outWheels();
@@ -196,7 +200,7 @@ public class PlaneController {
         @Override
         protected Object doInBackground() throws Exception {
             try {
-                Thread.sleep(Timing.timeToOpenGate);
+                Thread.sleep(Timing.TIME_TO_OPEN_GATE);
             } catch (InterruptedException e) {
                 System.err.println(e.getMessage());
             }
@@ -204,7 +208,7 @@ public class PlaneController {
             updateViews();
 
             try {
-                Thread.sleep(Timing.timeFromStabilizedToTransition);
+                Thread.sleep(Timing.TIME_FROM_STABILIZED_TO_TRANSITION);
             } catch (InterruptedException e) {
                 System.err.println(e.getMessage());
             }
@@ -212,7 +216,7 @@ public class PlaneController {
             updateViews();
 
             try {
-                Thread.sleep(Timing.timeFromTransitionToStabilized);
+                Thread.sleep(Timing.TIME_FROM_TRANSITION_TO_STABILIZED);
             } catch (InterruptedException e) {
                 System.err.println(e.getMessage());
             }
@@ -224,7 +228,7 @@ public class PlaneController {
             updateViews();
 
             try {
-                Thread.sleep(Timing.timeToCloseGate);
+                Thread.sleep(Timing.TIME_TO_CLOSE_GATE);
             } catch (InterruptedException e) {
                 System.err.println(e.getMessage());
             }
