@@ -42,15 +42,7 @@ public class MainView extends JFrame {
     private JSlider handle;
     //private JButton emergencyButton;
 
-    private PlaneController myPlaneController;
-
-    /**
-     * constructor, init the view
-     */
-    public MainView(){
-        initView();
-        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-    }
+    private final PlaneController myPlaneController;
 
     /**
      * constructor, init the view and assign the controller
