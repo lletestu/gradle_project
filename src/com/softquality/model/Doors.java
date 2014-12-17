@@ -1,4 +1,4 @@
-package soft_quality.model;
+package softquality.model;
 
 /**
  * Describe the possible state of a door
@@ -6,5 +6,5 @@ package soft_quality.model;
  *
  */
 public enum Doors {
-	OPEN,CLOSE
+    OPEN,CLOSE
 }

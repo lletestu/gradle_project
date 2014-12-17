@@ -1,4 +1,4 @@
-package soft_quality.model;
+package softquality.model;
 
 /**
  * define the position of gears on the plane
@@ -6,5 +6,5 @@ package soft_quality.model;
  *
  */
 public enum Position {
-	FRONT,LEFT,RIGHT
+    FRONT,LEFT,RIGHT
 }

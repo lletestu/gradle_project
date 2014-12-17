@@ -3,12 +3,12 @@ package model;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
-import soft_quality.model.*;
+import softquality.model.*;
 
 import java.util.HashMap;
 
 /**
- * {@link soft_quality.model.Plane}
+ * {@link softquality.model.Plane}
  */
 public class PlaneTest extends TestCase {
     Plane p;

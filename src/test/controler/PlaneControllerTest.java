@@ -1,15 +1,15 @@
 package controler;
 
-import soft_quality.controller.PlaneController;
-import soft_quality.view.MainView;
-import soft_quality.model.*;
+import softquality.controller.PlaneController;
+import softquality.view.MainView;
+import softquality.model.*;
 import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 /**
- * {@link soft_quality.controller.PlaneController}
+ * {@link softquality.controller.PlaneController}
  */
 public class PlaneControllerTest extends TestCase {
 

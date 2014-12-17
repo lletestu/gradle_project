@@ -1,4 +1,4 @@
-package soft_quality.model;
+package softquality.model;
 
 /**
  * Decribe the possible state of a wheel
@@ -6,5 +6,5 @@ package soft_quality.model;
  *
  */
 public enum Wheel {
-	IN,TRANSITION,OUT
+    IN,TRANSITION,OUT
 }

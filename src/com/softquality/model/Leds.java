@@ -1,4 +1,4 @@
-package soft_quality.model;
+package softquality.model;
 
 /**
  * define all the possible state of the led
@@ -6,5 +6,5 @@ package soft_quality.model;
  *
  */
 public enum Leds {
-	NONE,GREEN,ORANGE,RED
+    NONE,GREEN,ORANGE,RED
 }

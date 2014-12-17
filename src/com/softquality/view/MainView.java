@@ -1,10 +1,10 @@
-package soft_quality.view;
+package softquality.view;
 
-import soft_quality.controller.PlaneController;
-import soft_quality.model.Doors;
-import soft_quality.model.Handle;
-import soft_quality.model.Leds;
-import soft_quality.model.Wheel;
+import softquality.controller.PlaneController;
+import softquality.model.Doors;
+import softquality.model.Handle;
+import softquality.model.Leds;
+import softquality.model.Wheel;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -12,8 +12,6 @@ import javax.swing.border.Border;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -30,44 +28,44 @@ import java.util.Set;
  */
 public class MainView extends JFrame {
 
-	/**
-	 * Attributes
-	 */
-	private static final long serialVersionUID = -6629841697151115610L;
+    /**
+     * Attributes
+     */
+    private static final long serialVersionUID = -6629841697151115610L;
+    private static final int NUMBER_WHEELS = 3;
+
     private JPanel cockpitPanel;
     private JPanel gearsPanel;
 
-	private JLabel imgLeds;
-	private JLabel[] imgWheelState;
-	private JSlider handle;
-    private JButton emergencyButton;
-
-    private final static int NUMBER_WHEELS = 3;
+    private JLabel imgLeds;
+    private JLabel[] imgWheelState;
+    private JSlider handle;
+    //private JButton emergencyButton;
 
     private PlaneController myPlaneController;
-	
+
     /**
      * constructor, init the view
      */
-	public MainView(){
-		initView();
-		this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-	}
+    public MainView(){
+        initView();
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }
 
-	/**
-	 * constructor, init the view and assign the controller
-	 * @param controller the plane controller
-	 */
+    /**
+     * constructor, init the view and assign the controller
+     * @param controller the plane controller
+     */
     public MainView(PlaneController controller){
         myPlaneController = controller;
         initView();
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     }
-	
+
     /**
      * initialize the whole view
      */
-	private void initView(){
+    private void initView(){
         JPanel contentPanel = new JPanel();
         Border padding = BorderFactory.createEmptyBorder(10, 10, 10, 10);
         contentPanel.setBorder(padding);
@@ -80,9 +78,9 @@ public class MainView extends JFrame {
         contentPanel.add(gearsPanel, BorderLayout.PAGE_END);
 
         this.setContentPane(contentPanel);
-   
+
         pack();
-	}
+    }
 
     /**
      * Initialize cockpit panel
@@ -109,7 +107,11 @@ public class MainView extends JFrame {
 
         handle = new JSlider(JSlider.VERTICAL, 0,1,0);
         @SuppressWarnings("serial")
-		Hashtable<Integer, JLabel> labels = new Hashtable<Integer, JLabel>() {{ put(0, new JLabel("OUT")); put(1, new JLabel("IN")); }};
+        Hashtable<Integer, JLabel> labels = new Hashtable<Integer, JLabel>() {
+            { put(0, new JLabel("OUT"));
+                put(1, new JLabel("IN"));
+            }
+        };
         handle.setLabelTable(labels);
         handle.setPaintLabels(true);
         handle.addChangeListener(sliderListerner);
@@ -195,11 +197,9 @@ public class MainView extends JFrame {
             JSlider source = (JSlider)e.getSource();
 
             if(source.getValue() == 1) {
-            	myPlaneController.executeActionWithTriggeredTime(false);
-               //myPlaneController.inWheels(); //TODO change this bad practice
+                myPlaneController.executeActionWithTriggeredTime(false);
             } else {
-            	myPlaneController.executeActionWithTriggeredTime(true);
-               // myPlaneController.outWheels();
+                myPlaneController.executeActionWithTriggeredTime(true);
             }
         }
     };
@@ -208,31 +208,31 @@ public class MainView extends JFrame {
      * set the led state
      * @param color the new led state
      */
-	public void setLed(Leds color){
-		switch(color){
-		case GREEN:
-            imgLeds.setIcon(loadImgRessource("led_green2.png"));
-			break;
-		case NONE:
-            imgLeds.setIcon(loadImgRessource("led_empty2.png"));
-			break;
-		case ORANGE:
-            imgLeds.setIcon(loadImgRessource("led_orange2.png"));
-			break;
-		case RED:
-            imgLeds.setIcon(loadImgRessource("led_red2.png"));
-			break;
-		default:
-            imgLeds.setIcon(loadImgRessource("led_empty2.png"));
-			break;
-		}
-	}
-	
-	/**
-	 * change the wheels state
-	 * @param stateList the list of a wheels
-	 */
-	public void setWheelState(HashMap<Integer,Wheel> stateList){
+    public void setLed(Leds color){
+        switch(color){
+            case GREEN:
+                imgLeds.setIcon(loadImgRessource("led_green2.png"));
+                break;
+            case NONE:
+                imgLeds.setIcon(loadImgRessource("led_empty2.png"));
+                break;
+            case ORANGE:
+                imgLeds.setIcon(loadImgRessource("led_orange2.png"));
+                break;
+            case RED:
+                imgLeds.setIcon(loadImgRessource("led_red2.png"));
+                break;
+            default:
+                imgLeds.setIcon(loadImgRessource("led_empty2.png"));
+                break;
+        }
+    }
+
+    /**
+     * change the wheels state
+     * @param stateList the list of a wheels
+     */
+    public void setWheelState(HashMap<Integer,Wheel> stateList){
         Set<Integer> myKeys = stateList.keySet();
         Iterator<Integer> it = myKeys.iterator();
         int index;
@@ -259,97 +259,97 @@ public class MainView extends JFrame {
                 imgWheelState[index].setIcon(loadImgRessource(path));
             }
         }
-	}
-	
-	/**
-	 * change the wheels state
-	 * @param stateList the list of a wheels
-	 * @throws IOException 
-	 * @throws URISyntaxException 
-	 */
-	public void setWheelAndDoorState(HashMap<Integer,Wheel> stateList,
-			HashMap<Integer,Doors> doorsList) throws IOException, URISyntaxException{
+    }
+
+    /**
+     * change the wheels state
+     * @param stateList the list of a wheels
+     * @throws IOException
+     * @throws URISyntaxException
+     */
+    public void setWheelAndDoorState(HashMap<Integer,Wheel> stateList,
+                                     HashMap<Integer,Doors> doorsList) throws IOException, URISyntaxException{
         Set<Integer> myKeys = stateList.keySet();
         Iterator<Integer> it = myKeys.iterator();
         int index;
-        
+
         while (it.hasNext()) {
             Object key = it.next();
             index = (Integer) key;
             if (index > -1 && index <imgWheelState.length) {
-            	BufferedImage finalImage =  new BufferedImage(95,95,
-                		BufferedImage.TYPE_INT_ARGB);
-            	Graphics2D g = finalImage.createGraphics();
+                BufferedImage finalImage =  new BufferedImage(95,95,
+                        BufferedImage.TYPE_INT_ARGB);
+                Graphics2D g = finalImage.createGraphics();
                 switch (stateList.get(key)) {
                     case OUT:
-                    	g.drawImage(loadImage("wheel_down.png")
-                    			,null,0,0);
+                        g.drawImage(loadImage("wheel_down.png")
+                                ,null,0,0);
                         break;
                     case TRANSITION:
-                    	g.drawImage(loadImage("wheel_transition.png")
-                    			,
-                    			null,0,0);
+                        g.drawImage(loadImage("wheel_transition.png")
+                                ,
+                                null,0,0);
                         break;
                     case IN:
-                    	g.drawImage(loadImage("wheel_up.png")
-                    			,
-                    			null,0,0);
+                        g.drawImage(loadImage("wheel_up.png")
+                                ,
+                                null,0,0);
                         break;
                     default:
                         //TODO what is default case?
                         break;
                 }
-                
+
                 switch(doorsList.get(key)){
-				case CLOSE:
-					g.drawImage(loadImage("door_close.png"),
-                			null,0,0);
-					break;
-				case OPEN:
-					g.drawImage(loadImage("door_open.png"),
-                			null,0,0);
-					break;
-				default:
-					break;
-                
+                    case CLOSE:
+                        g.drawImage(loadImage("door_close.png"),
+                                null,0,0);
+                        break;
+                    case OPEN:
+                        g.drawImage(loadImage("door_open.png"),
+                                null,0,0);
+                        break;
+                    default:
+                        break;
+
                 }
-                
+
                 imgWheelState[index].setIcon(new ImageIcon(finalImage));
             }
         }
-	}
-	
-	/**
-	 * change handle state
-	 * @param position the new position of the handle
-	 */
-	public void setHandle(Handle position){
-        
-		switch(position){
-		case DOWN:
-			handle.setValue(0);
-			break;
-		case UP:
-			handle.setValue(1);
-			break;
-		default:
-			break;
-		}
-	}
-	
-	/**
-	 * disable the handle from user action
-	 */
-	public void disableHandle(){
-		handle.setEnabled(false);
-	}
-	
-	/**
-	 * enable the handle from user action
-	 */
-	public void enableHandle(){
-		handle.setEnabled(true);
-	}
+    }
+
+    /**
+     * change handle state
+     * @param position the new position of the handle
+     */
+    public void setHandle(Handle position){
+
+        switch(position){
+            case DOWN:
+                handle.setValue(0);
+                break;
+            case UP:
+                handle.setValue(1);
+                break;
+            default:
+                break;
+        }
+    }
+
+    /**
+     * disable the handle from user action
+     */
+    public void disableHandle(){
+        handle.setEnabled(false);
+    }
+
+    /**
+     * enable the handle from user action
+     */
+    public void enableHandle(){
+        handle.setEnabled(true);
+    }
 
     /**
      * Update views according data sending by controller
@@ -357,13 +357,13 @@ public class MainView extends JFrame {
      * @param wheelList state of wheel
      */
     public void updateData(Leds ledsState, HashMap<Integer,Wheel> wheelList,
-    		HashMap<Integer,Doors> doorList) {
+                           HashMap<Integer,Doors> doorList) {
         try {
-			setWheelAndDoorState(wheelList,doorList);
-		} catch (Exception e) {
-			JOptionPane.showMessageDialog(this, "Fail to refresh view : "+e.getMessage());
-			e.printStackTrace();
-		}
+            setWheelAndDoorState(wheelList,doorList);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(this, "Fail to refresh view : "+e.getMessage());
+            e.printStackTrace();
+        }
         setLed(ledsState);
     }
 
@@ -381,11 +381,11 @@ public class MainView extends JFrame {
             return null;
         }
     }
-    
+
     private BufferedImage loadImage(String path) throws IOException, URISyntaxException {
         java.net.URL imgURL = getClass().getClassLoader().getResource(path);
         if (imgURL != null) {
-        	return ImageIO.read(new File(imgURL.toURI()));
+            return ImageIO.read(new File(imgURL.toURI()));
         } else {
             System.err.println("Couldn't find file: " + path);
             return null;

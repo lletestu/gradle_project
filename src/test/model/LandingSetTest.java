@@ -4,12 +4,12 @@ import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import soft_quality.model.Doors;
-import soft_quality.model.LandingSet;
-import soft_quality.model.Wheel;
+import softquality.model.Doors;
+import softquality.model.LandingSet;
+import softquality.model.Wheel;
 
 /**
- * {@link soft_quality.model.LandingSet}
+ * {@link softquality.model.LandingSet}
  */
 public class LandingSetTest extends TestCase {
 
@@ -82,9 +82,5 @@ public class LandingSetTest extends TestCase {
         ls1.setWheelState(Wheel.OUT);
         ls1.setDoorState(Doors.CLOSE);
         assertTrue(ls1.checkValidity(Wheel.OUT, Doors.CLOSE));
-
-
-
-
     }
 }

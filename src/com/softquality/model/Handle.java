@@ -1,4 +1,4 @@
-package soft_quality.model;
+package softquality.model;
 
 /**
  * describe the possible state for handle
@@ -6,5 +6,5 @@ package soft_quality.model;
  *
  */
 public enum Handle {
-	UP,DOWN
+    UP,DOWN
 }
