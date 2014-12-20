@@ -145,9 +145,13 @@ public class PlaneTest extends TestCase {
     }
 
     @Test
-    public void checkInvalidState() {
+    public void testCheckInvalidState() {
         p = new Plane();
         p.setWheel(Wheel.IN, Position.FRONT);
+        assertFalse(p.checkFinalState(true));
+
+        p.setWheel(Wheel.OUT, Position.FRONT);
+        p.setDoors(Doors.OPEN, Position.FRONT);
         assertFalse(p.checkFinalState(true));
     }
 }

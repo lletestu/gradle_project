@@ -298,5 +298,31 @@ public class PlaneController {
         return wheel.values();
     }
 
+    /**
+     * Set error function for test
+     */
+    public void setError(){
+        //normal execution
+        front = new GearWorker(this, Position.FRONT, false);
+        front.execute();
+        left = new GearWorker(this, Position.LEFT, false);
+        left.execute();
+        right = new GearWorker(this, Position.RIGHT, false);
+        right.execute();
+        try {
+            Thread.sleep(Timing.TIME_TO_OPEN_GATE);
+            Thread.sleep(Timing.TIME_FROM_STABILIZED_TO_TRANSITION);
+            Thread.sleep(Timing.TIME_FROM_TRANSITION_TO_STABILIZED);
+            Thread.sleep(Timing.TIME_TO_CLOSE_GATE);
+            Thread.sleep(500);//tolerance time for propagation
+        } catch (InterruptedException e) {
+            //timing fail, test is irrelevant
+        }
+        //then introduce errors
+        myModel.setWheel(Wheel.IN,Position.FRONT);
+        myModel.setWheel(Wheel.OUT,Position.RIGHT);
+        this.updateFinalState(true);
+    }
+
 
 }

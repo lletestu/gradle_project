@@ -171,4 +171,15 @@ public class PlaneControllerTest extends TestCase {
             assertEquals(w,Wheel.IN);
         }
     }
+
+    @Test
+    public void testRedLeds(){
+        //set view
+        assertFalse(myPlaneController.isSettingView());
+        myPlaneController.setMyView(myView);
+        assertTrue(myPlaneController.isSettingView());
+
+        myPlaneController.setError();
+        assertEquals(myPlaneController.getMyLedState(),Leds.RED);
+    }
 }
